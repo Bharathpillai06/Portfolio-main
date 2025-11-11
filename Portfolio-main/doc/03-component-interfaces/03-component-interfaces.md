@@ -134,6 +134,15 @@ of it in this folder. You may also embed it just below using markdown syntax
 
 <!-- TODO: make a diagram of your component hierarchy then delete this comment -->
 
+Standard<Playlist>          
+        ▲
+        │
+PlaylistKernel  (add, remove, isEmpty)
+        ▲
+        │
+  Playlist      (shuffle, skip, currentSong, length)
+    
+
 To start making your interfaces, make a branch off of main in your new repo
 called something like `interfaces`. There are many ways to do this, but my
 preference is to use GitHub Desktop. From there, you can click the `Branch`
