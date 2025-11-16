@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\bhara\\Downloads\\components(1).jar"
+    ]
+}
