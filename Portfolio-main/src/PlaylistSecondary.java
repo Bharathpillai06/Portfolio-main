@@ -15,7 +15,6 @@ public abstract class PlaylistSecondary implements Playlist {
         int n = this.length();
         Song first = this.remove();
         this.add(first);
-        // restore original order
         for (int i = 1; i < n; i++) {
             this.add(this.remove());
         }
@@ -25,7 +24,6 @@ public abstract class PlaylistSecondary implements Playlist {
     @Override
     public final int length() {
         if (this.isEmpty()) return 0;
-        // marker pass: rotate once for each element
         Song marker = this.remove();
         this.add(marker);
         int count = 1;
@@ -46,9 +44,9 @@ public abstract class PlaylistSecondary implements Playlist {
         if (n <= 1) return;
         Random rnd = new Random();
         for (int i = 0; i < n; i++) {
-            int k = rnd.nextInt(n);    // 0..n-1
+            int k = rnd.nextInt(n);    
             for (int r = 0; r < k; r++) {
-                this.add(this.remove()); // rotation step
+                this.add(this.remove()); 
             }
         }
     }

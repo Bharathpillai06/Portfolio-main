@@ -25,7 +25,7 @@ public interface Playlist extends PlaylistKernel {
 
     /**
      * Returns the number of songs.
-     * @return |this|
+     * @return this
      */
     int length();
 }
