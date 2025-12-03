@@ -35,20 +35,15 @@ public final class Playlist1L extends PlaylistSecondary {
         this.createNewRep();
     }
 
-    // ---------------------------------------------------------------------
-    // Kernel methods (from PlaylistKernel)
-    // ---------------------------------------------------------------------
-
     @Override
     public void add(Song song) {
         assert song != null : "Violation of: song is not null";
-        this.rep.enqueue(song); // adds to the back of the playlist
-    }
+        this.rep.enqueue(song); }
 
     @Override
     public Song remove() {
         assert !this.isEmpty() : "Violation of: this is not empty";
-        return this.rep.dequeue(); // removes from the front
+        return this.rep.dequeue(); 
     }
 
     @Override
@@ -56,9 +51,7 @@ public final class Playlist1L extends PlaylistSecondary {
         return this.rep.length() == 0;
     }
 
-    // ---------------------------------------------------------------------
-    // Standard methods (from Standard<Playlist>)
-    // ---------------------------------------------------------------------
+   
 
     @Override
     public void clear() {
