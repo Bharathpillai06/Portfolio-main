@@ -73,6 +73,33 @@ the following form: YYYY.0M.0D.
 - Created initial drafts of the six portfolio assessments
 - Added READMEs to key folders like `test` and `lib` to explain their purpose
 
+## [2025.12.10]
+
+### Changed
+-FInished the .md files 1-6
+### Fixed
+- Fixed “The import org.junit cannot be resolved” errors
+- Fixed errors where `@Test`, `assertTrue`, and `assertEquals` were not recognized
+- Fixed Java Language Server initialization by forcing a workspace clean and reload
+
+### Added
+- Implemented full Playlist component:
+  - `Playlist`, `PlaylistKernel`, `PlaylistSecondary`, `Playlist1L`, `MusicPlaylistMVP`
+  - Immutable `Song` class
+- Added complete JUnit test suite (`Playlist1LTest`) and (`PlaylistSecondaryTest`)
+- Added JUnit 4 and Hamcrest JARs to `/lib`
+- Added `components.jar` for OSU Components API
+- Added helper methods for test song creation
+- Added documentation comments across Playlist implementation
+- Added `PlaylistConsoleDemo`
+
+### Removed
+
+-All todos from doc 1-6
+
+
+
+
 [unreleased]: https://github.com/jrg94/portfolio-project/compare/v2024.08.07...HEAD
 [2024.08.07]: https://github.com/jrg94/portfolio-project/compare/v2024.01.07...v2024.08.07
 [2024.01.07]: https://github.com/jrg94/portfolio-project/releases/tag/v2024.01.07
