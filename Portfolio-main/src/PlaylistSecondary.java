@@ -20,23 +20,21 @@ public abstract class PlaylistSecondary implements Playlist {
         }
         return first;
     }
+@Override
+public final int length() {
+    Playlist temp = this.newInstance();
+    int count = 0;
 
-    @Override
-    public final int length() {
-        if (this.isEmpty()) return 0;
-        Song marker = this.remove();
-        this.add(marker);
-        int count = 1;
-
-        Song t = this.remove();
-        this.add(t);
-        while (!Objects.equals(t, marker)) {
-            count++;
-            t = this.remove();
-            this.add(t);
-        }
-        return count;
+    while (!this.isEmpty()) {
+        Song s = this.remove();
+        temp.add(s);
+        count++;
     }
+
+    this.transferFrom(temp);
+
+    return count;
+}
 
     @Override
     public final void shuffle() {
