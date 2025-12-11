@@ -1,18 +1,9 @@
 import components.queue.Queue;
 import components.queue.Queue1L;
-
 /**
- * Playlist kernel implementation using an OSU Queue as the representation.
- *
- * Convention:
- *  - this.rep is not null
- *  - this.rep contains no null Song references
- *
- * Correspondence:
- *  - The abstract value of this Playlist is the sequence of Songs stored in
- *    this.rep from front to back. If this.rep = <s0, s1, ..., s_(n-1)>,
- *    then this playlist = <s0, s1, ..., s_(n-1)>.
+ * Implementation of the SpellBook component using the OSU API.
  */
+
 public final class Playlist1L extends PlaylistSecondary {
 
     /**
