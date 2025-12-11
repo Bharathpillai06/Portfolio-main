@@ -1,31 +1,27 @@
-// Playlist.java
-public interface Playlist extends PlaylistKernel {
+// PlaylistKernel.java
+import components.standard.Standard;
+
+public interface PlaylistKernel extends Standard<Playlist> {
     /**
-     * Shuffles the playlist randomly.
+     * Adds a song to the back of this playlist.
+     * @param song the song to add
      * @updates this
-     * @ensures this = [a permutation of #this]
+     * @ensures this = #this * <song>
      */
-    void shuffle();
+    void add(Song song);
 
     /**
-     * Advances the current song (front) to the back.
+     * Removes and returns the front song in this playlist.
      * @updates this
      * @requires !this.isEmpty()
-     * @ensures this = tail(#this) * <front(#this)>
+     * @return the song removed
+     * @ensures remove is the front of #this  &&  this = [#this without its front]
      */
-    void skip();
+    Song remove();
 
     /**
-     * Returns (but does not remove) the current song (front).
-     * @requires !this.isEmpty()
-     * @return the front song
-     * @ensures currentSong is in this  && this = #this
+     * Reports whether this playlist is empty.
+     * @return true iff this has no songs
      */
-    Song currentSong();
-
-    /**
-     * Returns the number of songs.
-     * @return this
-     */
-    int length();
+    boolean isEmpty();
 }
