@@ -135,12 +135,20 @@ of it in this folder. You may also embed it just below using markdown syntax
 <!-- TODO: make a diagram of your component hierarchy then delete this comment -->
 
 Standard<Playlist>          
-        ▲
+        implements
         │
+        v
 PlaylistKernel  (add, remove, isEmpty)
-        ▲
+        extends
         │
-  Playlist      (shuffle, skip, currentSong, length)
+        v
+
+PlaylistSecondary(shuffle, skip, currentSong, length)
+        implments
+        │
+        v
+
+  Playlist      
     
 
 To start making your interfaces, make a branch off of main in your new repo
