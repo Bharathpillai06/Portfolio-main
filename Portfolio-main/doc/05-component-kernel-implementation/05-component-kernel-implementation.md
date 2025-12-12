@@ -122,6 +122,12 @@ Below is further rationale/explanation for the rubric items above:
 
 <!-- TODO: select a representation and explain why -->
 
+
+For the component representation, I chose to model my Playlist using a queue. A queue is a good fit because the idea of a playlist is inherently ordered and “front-based”: there is a current song at the front and songs behind it in order, just like the front and rear of a queue. Using a queue makes operations like adding songs to the back and removing or skipping the current song straightforward and efficient.
+
+Convention: The underlying queue rep is never null, and it never contains null songs.
+Correspondence: The abstract value of this Playlist is exactly the sequence of Song entries stored in rep, in order from the front of the queue to the back. If a song name (or Song object) is not in rep, it is not in the playlist.
+
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
 > do this, but my preference is to use GitHub Desktop. From there, you can click
